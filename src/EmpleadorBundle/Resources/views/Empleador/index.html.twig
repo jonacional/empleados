@@ -1,0 +1,39 @@
+{% extends 'layout/layout.html.twig' %}
+{% block body %}
+{{parent() }}
+<div class="container">
+		<div class="col-md-12">
+			<div class="page-header margin-none">
+				<h2 class="padding-none">Empleadores</h2>
+			</div>
+			<div class="table-responsive">
+			<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+
+   
+      <th>Nombre</th>
+      <th>Sexo</th>
+      <th>Cedula</th>
+      <th>Teléfono</th>
+      <th>Dirección</th>
+      <th>Fecha Nacimiento</th> 
+     </tr>
+     </thead>
+     <tbody>
+     {%  for user in users  %}
+      <tr>
+      <td>{{ user.nombre }}</td>
+      <td>{{ user.sexo }}</td>
+      <td>{{ user.cedula }}</td>
+      <td>{{ user.telefono }}</td>
+      <td>{{ user.direcion }}</td>
+      <td>{{ user.fechaNac|date('Y-m-d')}}</td>
+      </tr>
+     {%   endfor %}
+     </tbody>
+ </table>
+ </div>
+  </div>
+   </div>
+ {% endblock %}

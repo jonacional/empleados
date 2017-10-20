@@ -1,0 +1,39 @@
+{% extends 'layout/layout.html.twig' %}
+{% block body %}
+{{parent() }}
+<div class="container">
+		<div class="col-md-12">
+			<div class="page-header margin-none">
+				<h2 class="padding-none">informe</h2>
+			</div>
+			<div class="table-responsive">
+			<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+
+   
+      <th>Nombre Empleador</th>
+      <th>Cedula Empleador</th>
+      <th>Dirección empleador</th>
+       <th>Nombre Empleado</th>
+       <th>Cedula Empleado</th>
+       <th>Tipo de contrato</th>
+     </tr>
+     </thead>
+     <tbody>
+     {%  for nominas in nomina  %}
+      <tr>
+      <td>{{ nominas.nom }}</td>
+      <td>{{ nominas.ced }}</td>
+      <td>{{ nominas.dir }}</td>
+      <td>{{ nominas.nom2 }}</td>
+      <td>{{ nominas.ced2  }}</td>
+      <td>{{ nominas.contrato }}</td>
+      </tr>
+     {%   endfor %}
+     </tbody>
+ </table>
+ </div>
+  </div>
+   </div>
+ {% endblock %}

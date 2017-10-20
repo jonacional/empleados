@@ -1,0 +1,63 @@
+{% extends 'layout/layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+	<div class="main container">
+		<div class="row well">
+			<div class="col-md-6">
+				<div class="page-header">
+					<h2>{% trans %}Nuevo Empleado{% endtrans %}</h2>
+				</div>
+                {{ form_start(form, { 'attr' : { 'role' : 'form'} }) }}
+                
+                <div class="form-group">
+                    {{ form_label(form.nombre) }}
+                    {{ form_widget(form.nombre, { 'attr' : {'class' : 'form-control', 'placeholder' : 'nombre completo'} }) }}
+                    <span class="text-danger">{{ form_errors(form.nombre) }}</span>
+                </div>
+                
+			    <div class="form-group">
+			        {{ form_label(form.sexo) }}
+			        {{ form_widget(form.sexo, {'attr': {'class': 'form-control', 'placeholder' : 'escoja su sexo'}}) }}
+			        <span class="text-danger">{{ form_errors(form.sexo) }}</span>
+			    </div> 
+			     <div class="form-group">
+			        {{ form_label(form.cedula) }}
+			        {{ form_widget(form.cedula, {'attr': {'class': 'form-control', 'placeholder' : 'tu cedula'}}) }}
+			        <span class="text-danger">{{ form_errors(form.cedula) }}</span>
+			    </div>
+
+			    <div class="form-group">
+			        {{ form_label(form.telefono) }}
+			        {{ form_widget(form.telefono, {'attr': {'class': 'form-control', 'placeholder' : 'tu telefono'}}) }}
+			        <span class="text-danger">{{ form_errors(form.telefono) }}</span>
+			    </div>
+
+			    <div class="form-group">
+			        {{ form_label(form.contrato) }}
+			        {{ form_widget(form.contrato, {'attr': {'class': 'form-control', 'placeholder' : 'Contrato'}}) }}
+			        <span class="text-danger">{{ form_errors(form.contrato) }}</span>
+			    </div>
+
+			     <div class="form-group">
+			        {{ form_label(form.empleador) }}
+			        {{ form_widget(form.empleador, {'attr': {'class': 'form-control', 'placeholder' : 'empleador'}}) }}
+			        <span class="text-danger">{{ form_errors(form.empleador) }}</span>
+			    </div>
+
+			     
+
+
+
+				 
+			</fieldset>
+
+		    <p>
+		        {{ form_widget(form.save, {'label' : 'Crear empleador', 'attr': {'class': 'btn btn-success'}}) }}
+		    </p>                
+        
+                {{ form_end(form) }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

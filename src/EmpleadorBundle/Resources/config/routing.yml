@@ -1,0 +1,27 @@
+empleador_homepage:
+    path:     /
+    defaults: { _controller: EmpleadorBundle:Default:index }
+
+empleador_index:
+    path: /empleador/index
+    defaults: { _controller: EmpleadorBundle:User:index}
+
+empleador_add:
+    path: /empleador/add
+    defaults: { _controller: EmpleadorBundle:User:add}
+
+empleado_list:
+    path: /empleado/list
+    defaults: { _controller: EmpleadorBundle:Empleado:list}
+
+empleado_nuevo:
+    path: /empleado/nuevo
+    defaults: { _controller: EmpleadorBundle:Empleado:nuevo}
+
+informe_index:
+    path: /informe/index
+    defaults: { _controller: EmpleadorBundle:Informe:index}
+
+
+
+ 
